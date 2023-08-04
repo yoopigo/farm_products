@@ -1,7 +1,12 @@
 import React from 'react';
+import Button from '../../ui/button/button';
 
 function Nav() {
-  return <></>;
+  return (
+    <nav className='nav'>
+      <Button>Купить</Button>
+    </nav>
+  );
 }
 
 export default Nav;

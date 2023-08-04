@@ -1,10 +1,8 @@
 import React from 'react';
+import './style.css';
+import '../layout/page-wrapper/page-wrapper';
+import PageWrapper from '../layout/page-wrapper/page-wrapper';
 
 export default function App() {
-  return (
-    <div className='App'>
-      <p>Hello world</p>
-      <p>Hello world</p>
-    </div>
-  );
+  return <PageWrapper />;
 }
