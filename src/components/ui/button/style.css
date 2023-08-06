@@ -22,3 +22,7 @@
 .button:active {
   box-shadow: none;
 }
+
+.button__flex-center {
+  align-self: center;
+}

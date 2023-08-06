@@ -17,3 +17,7 @@
 .title__normal {
   font-size: 32px;
 }
+
+.title__center {
+  align-self: center;
+}
