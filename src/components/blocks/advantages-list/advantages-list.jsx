@@ -15,7 +15,6 @@ function AdvantagesList({ advantages }) {
           <AdvantagesCard />
         </li>
       </ul>
-
       <Button buttonFlex={ButtonFlexCenter.CENTER}>Купить</Button>
     </section>
   );
