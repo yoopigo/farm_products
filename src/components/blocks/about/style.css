@@ -1,0 +1,46 @@
+.about {
+  position: relative;
+  padding: 183px 553px 183px 90px;
+  background-color: #d8ecfe;
+  gap: 24px;
+  box-sizing: border-box;
+  min-height: 600px;
+}
+
+.about::after {
+  content: '';
+  display: block;
+  position: absolute;
+  border-radius: 447px;
+  background: #c4e2ff;
+  width: 446px;
+  height: 447px;
+  right: 90px;
+  top: 75px;
+}
+
+.about::before {
+  content: '';
+  display: block;
+  position: absolute;
+  height: 620px;
+  width: 273px;
+  background: url('../../../assets/about/people.svg') no-repeat;
+  top: 37px;
+  right: 177px;
+  z-index: 2;
+}
+
+.about__wrapper {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 24px;
+  flex-direction: column;
+}
+
+.about__text {
+  line-height: 150%;
+  margin: 0;
+}
