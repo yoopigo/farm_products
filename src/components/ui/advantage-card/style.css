@@ -13,16 +13,17 @@
   gap: 20px;
 }
 
+.advantage-card__header {
+  display: flex;
+  gap: 20px;
+  justify-content: flex-start;
+}
+
 .advantage-card__title,
 .advantage-card__badge,
 .advantage-card__text,
 .advantage-card {
   margin: 0;
-}
-
-.advantage-card__title,
-.advantage-card__badge {
-  margin-left: 72px;
 }
 
 .advantage-card__badge {
@@ -36,13 +37,4 @@
 .advantage-card__title {
   font-weight: 700;
   position: relative;
-}
-
-.advantage-card::before {
-  content: '';
-  display: block;
-  width: 52px;
-  height: 52px;
-  background: url('../../../assets/badges/eat.svg') no-repeat;
-  position: absolute;
 }

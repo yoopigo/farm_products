@@ -14,6 +14,15 @@ function AdvantagesList({ advantages }) {
         <li className='advantages-list__item'>
           <AdvantagesCard />
         </li>
+        <li className='advantages-list__item'>
+          <AdvantagesCard />
+        </li>
+        <li className='advantages-list__item'>
+          <AdvantagesCard />
+        </li>
+        <li className='advantages-list__item'>
+          <AdvantagesCard />
+        </li>
       </ul>
       <Button buttonFlex={ButtonFlexCenter.CENTER}>Купить</Button>
     </section>
