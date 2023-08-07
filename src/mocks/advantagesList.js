@@ -1,4 +1,4 @@
-const features = [
+const advantages = [
   {
     id: 0,
     title: 'Еда намного вкуснее',
@@ -37,4 +37,4 @@ const features = [
   },
 ];
 
-export default features;
+export default advantages;

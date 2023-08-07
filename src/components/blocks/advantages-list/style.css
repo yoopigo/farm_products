@@ -1,4 +1,4 @@
-.advantages-list {
+.advantages {
   box-sizing: border-box;
   position: relative;
   min-height: 843px;
@@ -12,7 +12,7 @@
   width: 1280px;
 }
 
-.advantages-list__list {
+.advantages-list {
   list-style-type: none;
   padding: 0;
   display: flex;
