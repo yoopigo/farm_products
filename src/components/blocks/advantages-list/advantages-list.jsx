@@ -13,7 +13,7 @@ function AdvantagesList({ advantages }) {
       <ul className='advantages-list'>
         {advantages.map((advantage) => (
           <li className='advantages-list__item' key={advantage.id}>
-            <AdvantagesCard advantage={advantage} />
+            <AdvantagesCard {...advantage} />
           </li>
         ))}
       </ul>

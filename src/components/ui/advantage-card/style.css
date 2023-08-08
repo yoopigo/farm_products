@@ -13,6 +13,10 @@
   gap: 20px;
 }
 
+.advantage-card__negative {
+  background-color: #f8ddd7;
+}
+
 .advantage-card__header {
   display: flex;
   gap: 20px;
@@ -32,6 +36,10 @@
   min-width: 158px;
   padding: 2px 10px;
   color: #fff;
+}
+
+.advantage-card__badge__negative {
+  background-color: #f75531;
 }
 
 .advantage-card__title {
