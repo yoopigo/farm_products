@@ -1,14 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+import { createGlobalStyle } from 'styled-components';
+
+export const GlobalStyle = createGlobalStyle`
 
 *,
 *::before,
 *::after {
-  box-sizing: inherit;
+  box-sizing: border-box;
 }
 
 html {
   height: 100%;
-  box-sizing: border-box;
+
 }
 
 body,
@@ -19,11 +21,11 @@ html {
 body {
   position: relative;
   min-height: 100%;
-  font-family: 'Inter', 'Arial', sans-serif;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 150%;
-  color: #333;
+  font-family: ${(props) => props.theme.fontFamily};
+  font-size: ${(props) => props.theme.fontSizeDefault};
+  font-weight: ${(props) => props.theme.fontWeightDefault};
+  line-height: ${(props) => props.theme.lineHeightDefault};
+  color: ${(props) => props.theme.colorBlack};
 }
 
 a {
@@ -47,3 +49,5 @@ img {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+
+`;
