@@ -1,5 +1,5 @@
 import React from 'react';
-import './style.css';
+import StyledButton from './style';
 
 const ButtonFlexCenter = {
   CENTER: 'flex-center',
@@ -11,16 +11,16 @@ const ButtonSize = {
   BIG: 'BIG',
 };
 
-function Button({ children, buttonFlex, buttonSize }) {
+function Button({ children, buttonFlex, buttonSize, link }) {
   return (
-    <button
+    <StyledButton
       type='button'
       className={`button${buttonFlex ? ` button__${buttonFlex}` : ''}${
         buttonSize ? ` button__${buttonSize}` : ''
       }`}
     >
       {children}
-    </button>
+    </StyledButton>
   );
 }
 
