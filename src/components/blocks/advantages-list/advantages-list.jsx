@@ -1,7 +1,7 @@
 import React from 'react';
 import './style.css';
 import Title, { Location } from '../../ui/title/title';
-import Button, { ButtonFlexCenter } from '../../ui/button/button';
+import Button from '../../ui/button/button';
 import AdvantagesCard from '../../ui/advantage-card/advantage-card';
 
 function AdvantagesList({ advantages }) {
@@ -17,7 +17,9 @@ function AdvantagesList({ advantages }) {
           </li>
         ))}
       </ul>
-      <Button buttonFlex={ButtonFlexCenter.CENTER}>Купить</Button>
+      <Button minWidth={260} link='/catalog'>
+        Купить
+      </Button>
     </section>
   ) : null;
 }

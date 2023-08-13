@@ -1,23 +1,12 @@
 import React from 'react';
 import StyledButton from './style';
 
-const ButtonFlexCenter = {
-  CENTER: 'flex-center',
-  DEFAULT: '',
-};
-
-const ButtonSize = {
-  DEFAULT: '',
-  BIG: 'BIG',
-};
-
-function Button({ children, buttonFlex, buttonSize, link }) {
+function Button({ children, minWidth, link, className }) {
   return (
     <StyledButton
-      type='button'
-      className={`button${buttonFlex ? ` button__${buttonFlex}` : ''}${
-        buttonSize ? ` button__${buttonSize}` : ''
-      }`}
+      $minWidth={minWidth || '100%'}
+      {...(link ? { href: link } : { as: 'button', type: 'button' })}
+      className={className}
     >
       {children}
     </StyledButton>
@@ -25,4 +14,3 @@ function Button({ children, buttonFlex, buttonSize, link }) {
 }
 
 export default Button;
-export { ButtonFlexCenter, ButtonSize };
