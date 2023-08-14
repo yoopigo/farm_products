@@ -10,6 +10,7 @@
   gap: 64px;
   position: relative;
   width: 1280px;
+  align-items: center;
 }
 
 .advantages-list {

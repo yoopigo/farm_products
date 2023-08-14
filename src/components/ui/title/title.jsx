@@ -1,5 +1,5 @@
 import React from 'react';
-import './style.css';
+import StyledTitle from './style';
 
 const TitleSize = {
   BIG: 'big',
@@ -8,25 +8,13 @@ const TitleSize = {
   DEFAULT: '',
 };
 
-const Location = {
-  CENTER: 'center',
-  DEFAULT: '',
-};
-
-function Title({ children, size, location }) {
-  let titleClasses = 'title';
-
-  if (size) {
-    titleClasses += ` title__${size}`;
-  }
-
-  if (location) {
-    titleClasses += ` title__${location}`;
-  }
-
-  return <h1 className={titleClasses}>{children}</h1>;
+function Title({ level = 1, size, children }) {
+  return (
+    <StyledTitle as={`h${level}`} $size={size}>
+      {children}
+    </StyledTitle>
+  );
 }
 
 export default Title;
 export { TitleSize };
-export { Location };
