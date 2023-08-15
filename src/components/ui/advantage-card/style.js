@@ -25,6 +25,11 @@ const AdvantageTitle = styled.p`
   position: relative;
 `;
 
+const AdvantageImg = styled.img`
+  width: 52px;
+  height: 52px;
+`;
+
 const AcdantageCardBadge = styled.span`
   margin: 0;
   font-size: 14px;
@@ -47,4 +52,5 @@ export {
   AdvantageTitle,
   StyledAdvantageCard,
   AcdantageCardBadge,
+  AdvantageImg,
 };
