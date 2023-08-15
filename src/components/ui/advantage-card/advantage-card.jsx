@@ -6,7 +6,7 @@ import {
   AdvantageCardHeader,
   AdvantageTitle,
   StyledAdvantageCard,
-  AcdantageCardBadge,
+  AdvantageCardBadge,
   AdvantageImg,
 } from './style';
 
@@ -16,9 +16,9 @@ function AdvantageCard({ title, owner, about, isNegative, image }) {
       <AdvantageCardHeader>
         <AdvantageImg src={image} alt={title} />
         <div>
-          <AcdantageCardBadge isNegative={isNegative}>
+          <AdvantageCardBadge isNegative={isNegative}>
             {owner}
-          </AcdantageCardBadge>
+          </AdvantageCardBadge>
           <AdvantageTitle>{title}</AdvantageTitle>
         </div>
       </AdvantageCardHeader>
