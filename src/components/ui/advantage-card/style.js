@@ -30,7 +30,7 @@ const AdvantageImg = styled.img`
   height: 52px;
 `;
 
-const AcdantageCardBadge = styled.span`
+const AdvantageCardBadge = styled.span`
   margin: 0;
   font-size: 14px;
   min-width: 158px;
@@ -51,6 +51,6 @@ export {
   AdvantageCardHeader,
   AdvantageTitle,
   StyledAdvantageCard,
-  AcdantageCardBadge,
+  AdvantageCardBadge,
   AdvantageImg,
 };
