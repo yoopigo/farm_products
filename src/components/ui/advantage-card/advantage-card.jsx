@@ -1,15 +1,17 @@
 import React from 'react';
-import './style.css';
 import '../../../mocks/advantagesList';
+
+import {
+  AdvantageCardText,
+  AdvantageCardHeader,
+  AdvantageTitle,
+  StyledAdvantageCard,
+} from './style';
 
 function AdvantageCard({ title, owner, about, isNegative, image }) {
   return (
-    <section
-      className={`advantage-card${
-        isNegative ? ' advantage-card__negative' : ''
-      }`}
-    >
-      <div className='advantage-card__header'>
+    <StyledAdvantageCard isNegative={isNegative}>
+      <AdvantageCardHeader>
         <img
           className='advantage-card__img'
           width={52}
@@ -25,11 +27,11 @@ function AdvantageCard({ title, owner, about, isNegative, image }) {
           >
             {owner}
           </span>
-          <p className='advantage-card__title'>{title}</p>
+          <AdvantageTitle>{title}</AdvantageTitle>
         </div>
-      </div>
-      <p className='advantage-card__text'>{about}</p>
-    </section>
+      </AdvantageCardHeader>
+      <AdvantageCardText>{about}</AdvantageCardText>
+    </StyledAdvantageCard>
   );
 }
 

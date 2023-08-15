@@ -1,6 +1,5 @@
 import React from 'react';
-import './style.css';
-
+import StyledMain from './style';
 import Header from '../header/header';
 import MainPage from '../../pages/main-page/main-page';
 import Footer from '../footer/footer';
@@ -10,9 +9,9 @@ function PageWrapper() {
   return (
     <>
       <Header />
-      <main className='page-wrapper__main'>
+      <StyledMain>
         <MainPage advantages={advantages} />
-      </main>
+      </StyledMain>
       <Footer />
     </>
   );

@@ -1,17 +1,16 @@
 import React from 'react';
-import './style.css';
-
 import Logo from '../../ui/logo/logo';
 import Copyright from '../../ui/сopyright/сopyright';
+import { StyledFooter, FooterWrapper } from './style';
 
 function Footer() {
   return (
-    <footer className='footer__wrapper'>
-      <div className='footer'>
+    <FooterWrapper>
+      <StyledFooter>
         <Logo />
         <Copyright />
-      </div>
-    </footer>
+      </StyledFooter>
+    </FooterWrapper>
   );
 }
 
