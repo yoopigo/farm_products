@@ -6,6 +6,7 @@ import {
   AdvantageCardHeader,
   AdvantageTitle,
   StyledAdvantageCard,
+  AcdantageCardBadge,
 } from './style';
 
 function AdvantageCard({ title, owner, about, isNegative, image }) {
@@ -20,13 +21,9 @@ function AdvantageCard({ title, owner, about, isNegative, image }) {
           alt={title}
         />
         <div>
-          <span
-            className={`advantage-card__badge${
-              isNegative ? ' advantage-card__badge__negative' : ''
-            }`}
-          >
+          <AcdantageCardBadge isNegative={isNegative}>
             {owner}
-          </span>
+          </AcdantageCardBadge>
           <AdvantageTitle>{title}</AdvantageTitle>
         </div>
       </AdvantageCardHeader>
