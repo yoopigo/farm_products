@@ -1,7 +1,7 @@
 import React from 'react';
 import StyledButton from './style';
 
-function Button({ children, minWidth, link, className }) {
+function Button({ children, minWidth, link }) {
   return (
     <StyledButton
       $minWidth={minWidth || '100%'}
