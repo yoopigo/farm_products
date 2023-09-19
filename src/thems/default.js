@@ -10,6 +10,7 @@ const defaultTheme = {
   colorBadgeCardNegative: '#F75531',
   colorButton: '#FC9B27',
   colorHoverArFocusButton: '#FC7427',
+  backgroundColorGray: '#f7f7f7',
   pagePadding: '90px',
   fontFamily: '"Inter", "Arial", sans-serif',
   fontSizeDefault: '18px',
