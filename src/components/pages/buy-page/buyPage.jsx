@@ -1,7 +1,8 @@
 import React from 'react';
+import StyledOrder from './style';
 
 function BuyPage() {
-  return <p>Buy</p>;
+  return <StyledOrder>123</StyledOrder>;
 }
 
 export default BuyPage;

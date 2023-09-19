@@ -17,6 +17,8 @@ const defaultTheme = {
   pageWidth: '1280px',
   fontWeightDefault: '400',
   lineHeightDefault: '150%',
+  headerWidth: '80px',
+  footerWidth: '80px',
 };
 
 export default defaultTheme;
