@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { Label, Section } from '../../styled/index';
 import TextInput from '../../ui/text-input/text-input';
 
-const StyledOrder = styled(Section)`
+const StyledBuyPage = styled(Section)`
   position: absolute;
   top: ${(props) => props.theme.headerWidth};
   bottom: ${(props) => props.theme.footerWidth};
@@ -14,4 +14,11 @@ const StyledOrder = styled(Section)`
   max-width: ${(props) => props.theme.pageWidth};
 `;
 
-export default StyledOrder;
+const LeftColumn = styled.div`
+  width: 353px;
+  padding-left: ${(props) => props.theme.pagePadding};
+  overflow-y: overlay;
+  max-height: 100%;
+`;
+
+export { StyledBuyPage, LeftColumn };

@@ -1,8 +1,15 @@
 import React from 'react';
-import StyledOrder from './style';
+import { StyledBuyPage, LeftColumn } from './style';
+import Panel from '../../ui/panel/panel';
 
 function BuyPage() {
-  return <StyledOrder>123</StyledOrder>;
+  return (
+    <StyledBuyPage>
+      <LeftColumn>
+        <Panel></Panel>
+      </LeftColumn>
+    </StyledBuyPage>
+  );
 }
 
 export default BuyPage;
