@@ -18,11 +18,15 @@ function BuyPage() {
           </Title>
         </Panel>
         <Panel
-          addingTop={24}
+          paddingTop={24}
           paddingBottom={20}
           minWidth={353}
           lineHeight={27}
-        ></Panel>
+        >
+          <Title level={2} size={TitleSize.EXTRA_SMALL} lineHeight={27}>
+            Сделать заказ
+          </Title>
+        </Panel>
       </LeftColumn>
     </StyledBuyPage>
   );
