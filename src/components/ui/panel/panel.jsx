@@ -3,7 +3,8 @@ import { Section } from '../../styled/index';
 
 const Panel = styled(Section)`
   display: block;
-  width: ${(props) => props.Width || 'auto'}px;
+  min-width: ${(props) =>
+    props.minWidth !== undefined ? props.minWidth + 'px' : 'auto'};
   padding-top: ${(props) => `${props.paddingTop}px`};
   padding-left: 20px;
   padding-bottom: ${(props) => `${props.paddingBottom}px`};

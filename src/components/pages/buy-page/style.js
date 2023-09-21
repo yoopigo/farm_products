@@ -19,6 +19,7 @@ const LeftColumn = styled.div`
   padding-left: ${(props) => props.theme.pagePadding};
   overflow-y: overlay;
   max-height: 100%;
+  padding: 0;
 `;
 
 export { StyledBuyPage, LeftColumn };
