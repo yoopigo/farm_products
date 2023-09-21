@@ -5,7 +5,7 @@ const StyledTitle = styled.h1`
   margin: 0;
   padding: 0;
   font-weight: 700;
-  line-height: ${(props) => `${props.lineHeight}px`};
+  line-height: ${(props) => `${props.lineHeight}px` || '115%'};
   font-size: ${(props) => {
     let fontSize = '36px';
     if (props.$size === TitleSize.BIG) {

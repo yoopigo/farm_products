@@ -9,9 +9,9 @@ const TitleSize = {
   DEFAULT: '',
 };
 
-function Title({ level = 1, size, children }) {
+function Title({ level = 1, size, children, lineHeight }) {
   return (
-    <StyledTitle as={`h${level}`} $size={size}>
+    <StyledTitle as={`h${level}`} $size={size} lineHeight={lineHeight}>
       {children}
     </StyledTitle>
   );

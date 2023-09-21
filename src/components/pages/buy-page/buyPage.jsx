@@ -13,7 +13,7 @@ function BuyPage() {
           minWidth={353}
           marginBottom={18}
         >
-          <Title level={2} size={TitleSize.EXTRA_SMALL}>
+          <Title level={2} size={TitleSize.EXTRA_SMALL} lineHeight={27}>
             Выберите продукт
           </Title>
         </Panel>
