@@ -5,6 +5,7 @@ const TitleSize = {
   BIG: 'big',
   NORMAL: 'normal',
   SMALL: 'small',
+  EXTRA_SMALL: 'extra_small',
   DEFAULT: '',
 };
 

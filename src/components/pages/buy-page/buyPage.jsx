@@ -1,6 +1,7 @@
 import React from 'react';
 import { StyledBuyPage, LeftColumn } from './style';
 import Panel from '../../ui/panel/panel';
+import Title, { TitleSize } from '../../ui/title/title';
 
 function BuyPage() {
   return (
@@ -11,8 +12,17 @@ function BuyPage() {
           paddingBottom={26}
           minWidth={353}
           marginBottom={18}
+        >
+          <Title level={2} size={TitleSize.EXTRA_SMALL}>
+            Выберите продукт
+          </Title>
+        </Panel>
+        <Panel
+          addingTop={24}
+          paddingBottom={20}
+          minWidth={353}
+          lineHeight={27}
         ></Panel>
-        <Panel addingTop={24} paddingBottom={20} minWidth={353}></Panel>
       </LeftColumn>
     </StyledBuyPage>
   );
