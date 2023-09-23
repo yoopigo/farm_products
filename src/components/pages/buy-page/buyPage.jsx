@@ -9,6 +9,10 @@ import {
 import Panel from '../../ui/panel/panel';
 import Title, { TitleSize } from '../../ui/title/title';
 
+import Swiper from 'swiper';
+import 'swiper/css';
+import { Mousewheel, Scrollbar, Pagination } from 'swiper/modules';
+
 function BuyPage() {
   return (
     <StyledBuyPage as='form'>
