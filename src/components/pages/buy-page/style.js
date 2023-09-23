@@ -22,4 +22,21 @@ const LeftColumn = styled.div`
   padding: 0;
 `;
 
-export { StyledBuyPage, LeftColumn };
+const AddressInput = styled(TextInput)`
+  margin-bottom: 20px;
+  margin-top: 24px;
+`;
+
+const PriceLabel = styled(Label)`
+  font-size: 14px;
+  margin-bottom: 8px;
+`;
+
+const PriceValue = styled.span`
+  display: block;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 32px;
+`;
+
+export { StyledBuyPage, LeftColumn, AddressInput, PriceLabel, PriceValue };
