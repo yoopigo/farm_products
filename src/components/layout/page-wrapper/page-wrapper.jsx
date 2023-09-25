@@ -7,6 +7,7 @@ import MainPage from '../../pages/main-page/main-page';
 import advantages from '../../../mocks/advantagesList';
 import Footer from '../footer/footer';
 import BuyPage from '../../pages/buy-page/buyPage';
+import products from '../../../mocks/products';
 
 function PageWrapper() {
   return (
@@ -14,7 +15,7 @@ function PageWrapper() {
       <Header />
       <StyledMain>
         {/* <MainPage advantages={advantages} /> */}
-        <BuyPage />
+        <BuyPage products={products} />
       </StyledMain>
       <Footer />
     </>

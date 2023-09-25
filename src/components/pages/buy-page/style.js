@@ -2,6 +2,8 @@
 import styled from 'styled-components';
 import { Label, Section } from '../../styled/index';
 import TextInput from '../../ui/text-input/text-input';
+import { Swiper } from 'swiper/react';
+import 'swiper/css';
 
 const StyledBuyPage = styled(Section)`
   position: absolute;
@@ -39,4 +41,23 @@ const PriceValue = styled.span`
   margin-bottom: 32px;
 `;
 
-export { StyledBuyPage, LeftColumn, AddressInput, PriceLabel, PriceValue };
+const ProductSwiper = styled(Swiper)`
+  width: 727px;
+
+  .swiper-pagination {
+    display: none;
+  }
+
+  .swiper-slide {
+    flex-shrink: 1;
+  }
+`;
+
+export {
+  StyledBuyPage,
+  LeftColumn,
+  AddressInput,
+  PriceLabel,
+  PriceValue,
+  ProductSwiper,
+};

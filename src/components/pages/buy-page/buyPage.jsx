@@ -5,13 +5,15 @@ import {
   AddressInput,
   PriceLabel,
   PriceValue,
+  ProductSwiper,
 } from './style';
 import Panel from '../../ui/panel/panel';
 import Title, { TitleSize } from '../../ui/title/title';
-
-import Swiper from 'swiper';
+import ProductCart from '../../ui/product-cart/products-cart';
+import { SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import { Mousewheel, Scrollbar, Pagination } from 'swiper/modules';
+import products from '../../../mocks/products';
 
 function BuyPage() {
   return (
@@ -26,7 +28,7 @@ function BuyPage() {
           <Title level={2} size={TitleSize.EXTRA_SMALL} lineHeight={27}>
             Выберите продукт
           </Title>
-          Чекбокс со списком продуктовw
+          Чекбокс со списком продуктов
         </Panel>
         <Panel
           paddingTop={24}
@@ -42,7 +44,17 @@ function BuyPage() {
           <PriceValue>1 200 руб.</PriceValue>
         </Panel>
       </LeftColumn>
-      <div> Слайда</div>
+      <ProductSwiper
+        modules={[Mousewheel, Scrollbar, Pagination]}
+        spaceBetween={50}
+        slidesPerView={3}
+      >
+        {products.map((product) => (
+          <SwiperSlide key={product.id}>
+            <ProductCart product={product} />
+          </SwiperSlide>
+        ))}
+      </ProductSwiper>
     </StyledBuyPage>
   );
 }
