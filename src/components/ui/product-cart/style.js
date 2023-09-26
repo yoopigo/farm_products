@@ -9,16 +9,16 @@ const StyledProductCart = styled.div`
   padding: 20px;
   box-sizing: border-box;
   background: ${(props) => props.theme.colorWhite};
-  gap: 20px;
-  flex-direction: column;
+  gap: 12px;
+  flex-direction: row;
   border: 1px solid rgba(0, 0, 0, 0.1);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.04), 0 2px 6px rgba(0, 0, 0, 0.04),
-    0 0 1px;
 `;
 
 const ProductImage = styled(Img)`
   width: 248px;
   height: 248px;
+  object-fit: cover;
+  border: 1px solid rgba(0, 0, 0, 0.1);
 `;
 
 const ProductTitle = styled(Title)`

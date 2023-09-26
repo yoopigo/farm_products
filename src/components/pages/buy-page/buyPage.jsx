@@ -45,8 +45,9 @@ function BuyPage() {
         </Panel>
       </LeftColumn>
       <ProductSwiper
+        direction={'vertical'}
         modules={[Mousewheel, Scrollbar, Pagination]}
-        spaceBetween={50}
+        spaceBetween={12}
         slidesPerView={3}
       >
         {products.map((product) => (

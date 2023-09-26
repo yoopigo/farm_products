@@ -12,7 +12,7 @@ import {
 export default function ProductCart({ product }) {
   return (
     <StyledProductCart>
-      <ProductImage src={product.image}></ProductImage>
+      <ProductImage src={product.image} alt={product.name}></ProductImage>
       <ContentWrapper>
         <ProductTitle level={2} size={TitleSize.SMALL} lineHeight={31}>
           {product.name}

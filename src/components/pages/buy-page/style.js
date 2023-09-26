@@ -43,6 +43,7 @@ const PriceValue = styled.span`
 
 const ProductSwiper = styled(Swiper)`
   width: 727px;
+  margin-left: 20px;
 
   .swiper-pagination {
     display: none;
