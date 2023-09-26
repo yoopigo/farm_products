@@ -18,7 +18,6 @@ export default function ProductCart({ product }) {
           {product.name}
         </ProductTitle>
         <Price>
-          {' '}
           {product.price} руб. / {product.weight} гр.
         </Price>
       </ContentWrapper>
