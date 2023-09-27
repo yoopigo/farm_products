@@ -65,7 +65,7 @@ const products = [
     structure: [
       {
         property: 'Энергетическая ценность',
-        value: '335 ккалю./765 кДж',
+        value: '335 ккал./765 кДж',
       },
       {
         property: 'Пищевая ценность',

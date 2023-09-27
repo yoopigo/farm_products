@@ -14,7 +14,7 @@ import OptionsList from '../../ui/option-list/option-list';
 export default function ProductCart({ product }) {
   const tabsList = [
     {
-      title: 'Oписание',
+      title: 'Описание',
       content: product.description,
     },
     {
