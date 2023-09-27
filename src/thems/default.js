@@ -19,6 +19,7 @@ const defaultTheme = {
   lineHeightDefault: '150%',
   headerWidth: '80px',
   footerWidth: '80px',
+  indent: '20px',
 };
 
 export default defaultTheme;
