@@ -33,7 +33,7 @@ export default function ProductCart({ product }) {
         <ProductTitle level={2} size={TitleSize.SMALL} lineHeight={31}>
           {product.name}
         </ProductTitle>
-        <Tabs maxContentHeiht='105px' tabsList={tabsList} />
+        <Tabs tabsList={tabsList} />
         <Price>
           {product.price} руб. / {product.weight} гр.
         </Price>

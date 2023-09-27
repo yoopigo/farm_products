@@ -17,8 +17,9 @@ const TabListItem = styled(Li)`
 const Content = styled.div`
   font-size: 14px;
   text-align: left;
-  max-height: ${(props) => props.$maxContentHeiht || 'none'};
+  max-height: 105px;
   overflow-y: overlay;
+  margin-bottom: 14px;
 `;
 
 const TabButton = styled.button`
@@ -28,6 +29,7 @@ const TabButton = styled.button`
   font-weight: 400;
   min-height: 37px;
   box-sizing: border-box;
+  display: block;
   ${(props) =>
     props.$isSelect
       ? css`

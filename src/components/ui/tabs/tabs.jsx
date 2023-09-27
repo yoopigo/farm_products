@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
-import { TabsBlock, TabButton, TabListItem } from './style';
+import { TabsBlock, TabButton, TabListItem, Content } from './style';
 
-function Tabs({ tabList = [] }) {
+function Tabs({ tabsList = [] }) {
   const [selectIndex, setSelectIndex] = useState(0);
 
   return (
     <div>
       <TabsBlock>
-        {tabList.map((tab, index) => (
+        {tabsList.map((tab, index) => (
           <TabListItem key={`tab${index * 10}`}>
             <TabButton
               $isSelect={selectIndex === index}
@@ -24,6 +24,7 @@ function Tabs({ tabList = [] }) {
           </TabListItem>
         ))}
       </TabsBlock>
+      <Content>{tabsList[selectIndex].content}</Content>
     </div>
   );
 }

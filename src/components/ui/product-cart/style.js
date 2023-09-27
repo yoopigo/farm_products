@@ -29,6 +29,7 @@ const ContentWrapper = styled.div`
   width: 419px;
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
 `;
 
 const Price = styled.span`
@@ -37,6 +38,7 @@ const Price = styled.span`
   font-weight: bold;
   display: inline-block;
   line-height: 21px;
+  align-self: start;
   background-color: ${(props) => props.theme.colorBlueBackground};
 `;
 
