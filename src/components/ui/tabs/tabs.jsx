@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { TabsBlock, TabButton } from './style';
+import { TabsBlock, TabButton, TabListItem } from './style';
 
-function Tabs(tabList = []) {
+function Tabs({ tabList = [] }) {
   const [selectIndex, setSelectIndex] = useState(0);
 
   return (

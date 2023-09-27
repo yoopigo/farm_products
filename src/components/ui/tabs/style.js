@@ -1,9 +1,17 @@
 import styled, { css } from 'styled-components';
-import Button from '../../ui/button/button';
+import { Li } from '../../styled/index';
 
 const TabsBlock = styled.div`
   display: flex;
   margin-bottom: 16px;
+`;
+
+const TabListItem = styled(Li)`
+  margin-right: 8px;
+
+  &:last-child {
+    margin-right: 0;
+  }
 `;
 
 const Content = styled.div`
@@ -34,4 +42,4 @@ const TabButton = styled.button`
         `}
 `;
 
-export { TabsBlock, Content, TabButton };
+export { TabsBlock, Content, TabButton, TabListItem };
