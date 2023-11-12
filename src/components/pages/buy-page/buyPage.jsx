@@ -1,4 +1,5 @@
 import React from 'react';
+import { useState } from 'react';
 import {
   StyledBuyPage,
   LeftColumn,
@@ -6,6 +7,7 @@ import {
   PriceLabel,
   PriceValue,
   ProductSwiper,
+  CheckboxLabel,
 } from './style';
 import Panel from '../../ui/panel/panel';
 import Title, { TitleSize } from '../../ui/title/title';
@@ -14,8 +16,10 @@ import { SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import { Mousewheel, Scrollbar, Pagination } from 'swiper/modules';
 import products from '../../../mocks/products';
+import CheckboxList from '../../ui/checkbox-list/checkbox-list';
 
-function BuyPage() {
+function BuyPage({ products }) {
+  const [selectProductIds, setSelectProductIds] = useState([]);
   return (
     <StyledBuyPage as='form'>
       <LeftColumn>
@@ -28,7 +32,17 @@ function BuyPage() {
           <Title level={2} size={TitleSize.EXTRA_SMALL} lineHeight={27}>
             Выберите продукт
           </Title>
-          Чекбокс со списком продуктов
+          <CheckboxList
+            labelComponent={CheckboxLabel}
+            name={'select-products'}
+            isGridList={false}
+            options={products.map((product) => ({
+              value: product.id,
+              title: product.name,
+            }))}
+            selectValues={selectProductIds}
+            onChange={setSelectProductIds}
+          />
         </Panel>
         <Panel
           paddingTop={24}
@@ -39,6 +53,7 @@ function BuyPage() {
           <Title level={2} size={TitleSize.EXTRA_SMALL} lineHeight={27}>
             Сделать заказ
           </Title>
+
           <AddressInput placeholder='Введите адрес доставки'></AddressInput>
           <PriceLabel>Цена</PriceLabel>
           <PriceValue>1 200 руб.</PriceValue>
