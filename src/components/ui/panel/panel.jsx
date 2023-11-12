@@ -7,6 +7,7 @@ const Panel = styled(Section)`
     props.minWidth !== undefined ? props.minWidth + 'px' : 'auto'};
   padding-top: ${(props) => `${props.paddingTop}px`};
   padding-left: 20px;
+  padding-right: 20px;
   padding-bottom: ${(props) => `${props.paddingBottom}px`};
   margin-bottom: ${(props) => props.marginBottom || 0}px;
   border: 1px solid rgba(0, 0, 0, 0.1);

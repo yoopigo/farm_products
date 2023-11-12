@@ -14,12 +14,22 @@ import Title, { TitleSize } from '../../ui/title/title';
 import ProductCart from '../../ui/product-cart/products-cart';
 import { SwiperSlide } from 'swiper/react';
 import 'swiper/css';
-import { Mousewheel, Scrollbar, Pagination } from 'swiper/modules';
-import products from '../../../mocks/products';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/scrollbar';
+import 'swiper/css/mousewheel';
 import CheckboxList from '../../ui/checkbox-list/checkbox-list';
 
 function BuyPage({ products }) {
+  const [swiperRef, setSwiperRef] = useState(null);
   const [selectProductIds, setSelectProductIds] = useState([]);
+
+  const handleOnClickProduct = (value, index) => {
+    if (!selectProductIds.includes(value)) {
+      swiperRef.slideTo(index, 500);
+    }
+  };
+
   return (
     <StyledBuyPage as='form'>
       <LeftColumn>
@@ -35,13 +45,13 @@ function BuyPage({ products }) {
           <CheckboxList
             labelComponent={CheckboxLabel}
             name={'select-products'}
-            isGridList={false}
             options={products.map((product) => ({
               value: product.id,
               title: product.name,
             }))}
             selectValues={selectProductIds}
             onChange={setSelectProductIds}
+            onClickLabel={handleOnClickProduct}
           />
         </Panel>
         <Panel
@@ -60,10 +70,12 @@ function BuyPage({ products }) {
         </Panel>
       </LeftColumn>
       <ProductSwiper
+        onSwiper={setSwiperRef}
+        mousewheel={{ enabled: true }}
         direction={'vertical'}
-        modules={[Mousewheel, Scrollbar, Pagination]}
         spaceBetween={12}
         slidesPerView={3}
+        scrollbar={{ draggable: true }}
       >
         {products.map((product) => (
           <SwiperSlide key={product.id}>
