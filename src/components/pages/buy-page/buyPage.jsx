@@ -10,6 +10,7 @@ import {
   CheckboxLabel,
 } from './style';
 import Panel from '../../ui/panel/panel';
+import Button from '../../../components/ui/button/button';
 import Title, { TitleSize } from '../../ui/title/title';
 import ProductCart from '../../ui/product-cart/products-cart';
 import { SwiperSlide } from 'swiper/react';
@@ -24,13 +25,32 @@ function BuyPage({ products }) {
   const [swiperRef, setSwiperRef] = useState(null);
   const [selectProductIds, setSelectProductIds] = useState([]);
 
+  const selectProducts = selectProductIds.map((id) =>
+    products.find((product) => product.id === id)
+  );
+
+  const fullPrice = selectProducts.reduce(
+    (sum, product) => (sum += product.price),
+    0
+  );
+
   const handleOnClickProduct = (value, index) => {
     if (!selectProductIds.includes(value)) {
       swiperRef.slideTo(index, 500);
     }
   };
 
-  return (
+  const [address, setAddress] = useState('');
+
+  const handleBuyClick = () => {
+    alert(`Спасибо за заказ, вы купили:\n${selectProducts.map(
+      (product) => `${product.name} - ${product.price} руб.\n`
+    )}
+    Итого: ${fullPrice} руб.
+    Доставка по адресу: ${address}.`);
+  };
+
+  return products && products.length ? (
     <StyledBuyPage as='form'>
       <LeftColumn>
         <Panel
@@ -64,9 +84,19 @@ function BuyPage({ products }) {
             Сделать заказ
           </Title>
 
-          <AddressInput placeholder='Введите адрес доставки'></AddressInput>
+          <AddressInput
+            value={address}
+            onChange={(e) => setAddress(e.target.value)}
+            placeholder='Введите адрес доставки'
+          />
           <PriceLabel>Цена</PriceLabel>
-          <PriceValue>1 200 руб.</PriceValue>
+          <PriceValue>{fullPrice} руб.</PriceValue>
+          <Button
+            onClick={handleBuyClick}
+            disabled={!(selectProductIds.length && address)}
+          >
+            Купить
+          </Button>
         </Panel>
       </LeftColumn>
       <ProductSwiper
@@ -84,6 +114,8 @@ function BuyPage({ products }) {
         ))}
       </ProductSwiper>
     </StyledBuyPage>
+  ) : (
+    'Продукты были слишком вкусные и их разобрали.'
   );
 }
 

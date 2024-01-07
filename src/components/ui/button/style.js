@@ -3,7 +3,8 @@ import styled from 'styled-components';
 const StyledButton = styled.a`
   background-color: ${(props) => props.theme.colorButton};
   min-height: 60px;
-  min-width: ${(props) => `${props.$minWidth}px` || '100%'};
+
+  min-width: ${(props) => props.$minWidth || '100%'};
   color: ${(props) => props.theme.colorWhite};
   cursor: pointer;
   font-weight: 700;
@@ -23,6 +24,13 @@ const StyledButton = styled.a`
   &:active {
     box-shadow: none;
     background-color: ${(props) => props.theme.colorHoverArFocusButton};
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    box-shadow: none;
+    background-color: #fc9b27;
+    cursor: default;
   }
 `;
 
