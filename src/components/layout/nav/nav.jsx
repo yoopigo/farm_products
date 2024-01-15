@@ -10,7 +10,14 @@ const links = [
     to: appRoute.MAIN,
     item: <StyledButton link={appRoute.MAIN}>Главная</StyledButton>,
   },
-  { to: appRoute.CATALOG, item: <Button link={appRoute.CATALOG}>Купить</Button> },
+  {
+    to: appRoute.CATALOG,
+    item: (
+      <Button minWidth={260} link={appRoute.CATALOG}>
+        Купить
+      </Button>
+    ),
+  },
 ];
 
 function Nav() {
