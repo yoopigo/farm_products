@@ -1,6 +1,7 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
-const StyledButton = styled.a`
+const StyledButton = styled(Link)`
   background-color: ${(props) => props.theme.colorButton};
   min-height: 60px;
 

@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 
 const Li = styled.li`
-  style-list: none;
+  list-style: none;
+  vertical-align: top;
 `;
 
 export default Li;

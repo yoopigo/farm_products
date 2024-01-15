@@ -9,13 +9,14 @@ import Footer from '../footer/footer';
 import BuyPage from '../../pages/buy-page/buyPage';
 import products from '../../../mocks/products';
 
-function PageWrapper() {
+import { Outlet } from 'react-router-dom';
+
+function PageWrapper({ products }) {
   return (
     <>
       <Header />
       <StyledMain>
-        {/* <MainPage advantages={advantages} /> */}
-        <BuyPage products={products} />
+        <Outlet />
       </StyledMain>
       <Footer />
     </>
